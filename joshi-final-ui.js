@@ -1,0 +1,10 @@
+(()=>{try{
+const css='.jd-icon{display:none!important}.jd-copy{padding-top:14px!important}.jd-copy h3{margin-top:0!important}.jd-card img{height:190px!important}.brand{font-size:0!important}.brand:before{content:"JOSHI OS //";font:30px Georgia,serif;letter-spacing:.03em;color:#f1e5ea}.brand small{display:none!important}.avatar{width:46px!important;height:46px!important;border-radius:50%!important;object-fit:cover!important;border:1px solid #cfa9ba!important;box-shadow:0 0 0 2px rgba(207,169,186,.08)}.jd-head{padding-top:2px!important}.jd-cloud{width:58px!important;height:58px!important;object-fit:contain!important}.joshi-dashboard{max-width:none}.jd-banner{min-height:190px!important}.jd-banner:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,6,10,.18),transparent 45%,rgba(8,6,10,.22));pointer-events:none}.jd-banner:after{background:linear-gradient(90deg,rgba(15,11,15,.82),rgba(15,11,15,.12),rgba(15,11,15,.72))!important}.jd-grid{gap:12px!important}.jd-card{min-height:275px!important}.jd-card:hover{transform:translateY(-2px)}';
+const s=document.createElement('style');s.id='joshi-final-ui-css';s.textContent=css;document.head.appendChild(s);
+function patch(){
+ document.querySelectorAll('.jd-cloud').forEach(i=>{if(i.src.indexOf('joshi-cloud-logo(1).png')<0)i.src='joshi-cloud-logo(1).png'});
+ document.querySelectorAll('.avatar').forEach(i=>{if(i.dataset.joshiAvatar)return;i.dataset.joshiAvatar='1';i.src='user icon.png';i.onerror=()=>{i.onerror=null;i.src='hobbies.jpeg'}});
+ document.querySelectorAll('.tile .tb').forEach(x=>{const old=x.querySelector('.tile-icon,.icon,.symbol');if(old)old.style.display='none'});
+}
+patch();const root=document.getElementById('view');if(root)new MutationObserver(()=>requestAnimationFrame(patch)).observe(root,{childList:true,subtree:true});
+}catch(e){console.warn('JOSHI final UI disabled',e)}})();
