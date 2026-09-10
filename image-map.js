@@ -1,13 +1,17 @@
 (()=>{
   const MAP={
-    body:'IMG_0953.jpeg',
-    meal:'IMG_0954.jpeg',
-    journal:'IMG_0955.jpeg',
-    goals:'IMG_0956.jpeg',
-    projects:'IMG_0957.jpeg',
-    sleep:'IMG_0958.jpeg',
+    sleep:'sleep.jpeg',
+    study:'study.jpeg',
+    body:'body.jpeg',
+    glow:'glow up.jpeg',
+    wallet:'walleti.jpeg',
+    meal:'meal.jpeg',
+    journal:'journal.jpeg',
+    goals:'goals.jpeg',
+    projects:'projects.jpeg',
+    habits:'hobbies.jpeg',
     hobbies:'hobbies.jpeg',
-    glow:'F584E7AC-3482-4B28-819F-8872E899B875.png'
+    korean:'korean.jpeg'
   };
   function patch(){
     document.querySelectorAll('.tile[data-page]').forEach(tile=>{
